@@ -1,0 +1,39 @@
+---
+title: learn NextJs 14
+author: WAQAS AWAN
+---
+
+# This is markdown file 
+<Newsletter/>
+Here is list of items:
+- item 1 
+- item 2 
+- item 3
+ 
+ ```jsx
+import { getPostsBySlug } from "@/lib/posts";
+
+const page = async ({ params }) => {
+  const { slug } = params;
+  const { content, frontmatter } = await getPostsBySlug(slug);
+
+  return (
+    <section className="py-24 flex items-center justify-center flex-col ">
+      <div className="container">
+        {/* post formatting  */}
+        <header className="rounded bg-gray-100 p-8">
+          <h1 className=" font-serif text-3xl "> {frontmatter.title} </h1>
+          <p className="text-sm font-light uppercase leading-3 text-gray-500">
+            {frontmatter.author}
+          </p>
+        </header>
+      </div>
+      <main className="prose mt-12"> {content}</main>
+    </section>
+  );
+};
+
+export default page;
+
+
+ ```
