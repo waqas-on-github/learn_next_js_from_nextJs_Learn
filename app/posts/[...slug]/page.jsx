@@ -17,7 +17,7 @@ const page = async ({ params }) => {
     <section className="py-24 flex items-center justify-center flex-col ">
       <div className="container">
         {/* post formatting  */}
-        <header className="rounded bg-gray-100 p-8">
+        <header className="rounded p-8">
           <h1 className=" font-serif text-3xl "> {frontmatter.title} </h1>
           <p className="text-sm font-light uppercase leading-3 text-gray-500">
             {frontmatter.author}

@@ -2,7 +2,7 @@
 import "./globals.css";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/footer";
-
+import Providers from "./components/Providers";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,11 +15,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <Providers>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </Providers>
         </div>
       </body>
     </html>
   );
+}
+
+{
+  /* we can put  client components in sever components with use directive "use client" */
+  // we can not import server components to client components if we do so "server components"
+  // will turn into client components
 }
