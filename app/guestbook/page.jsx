@@ -1,6 +1,8 @@
 import { getAllMessages } from "@/lib/gusetbook";
 import GuestFormEntries from "../components/ui/GuestFormEntries";
 
+
+
 export const getMessage = async () => {
   const messages = await getAllMessages();
   return messages;

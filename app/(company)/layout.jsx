@@ -3,8 +3,7 @@ import React from "react";
 const layout = ({ children }) => {
   return (
     <div>
-      <div>layout by company </div>
-
+      <div className="bg-slate-950 p-[]">layout by company </div>
       {children}
     </div>
   );

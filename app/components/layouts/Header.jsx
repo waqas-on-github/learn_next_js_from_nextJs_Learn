@@ -1,6 +1,7 @@
 import React from "react";
 import NavLink from "./NavLink";
 import dynamic from "next/dynamic";
+import SignInSignUp from "../SignInSignUp";
 // every component either its server/client component server side renderd at first which cause
 // hydration for client specific components
 const ThemeButton = dynamic(() => import("../../components/ui/ThemeButton"), {
@@ -14,7 +15,10 @@ const Header = () => {
       <NavLink href="/team"> Team </NavLink>
       <NavLink href="/posts"> Blog</NavLink>
       <NavLink href="/guestbook"> Gusetbook </NavLink>
-      <ThemeButton />
+      <div className="flex items-center gap-4 ">
+        <ThemeButton />
+        <SignInSignUp />
+      </div>
     </div>
   );
 };
